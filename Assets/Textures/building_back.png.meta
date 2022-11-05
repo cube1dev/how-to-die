@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: 6882223307783604448
     second: building_back_3
+  - first:
+      213: -7087066494267300935
+    second: building_back_4
+  - first:
+      213: 7292490951500510400
+    second: building_back_5
+  - first:
+      213: -3426237425083707654
+    second: building_back_6
+  - first:
+      213: 8207285996512078448
+    second: building_back_7
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -183,6 +195,90 @@ TextureImporter:
       bones: []
       spriteID: 0e80b5582a1928f50800000000000000
       internalID: 6882223307783604448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_back_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3ef95829ea5ad90800000000000000
+      internalID: -7087066494267300935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_back_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c430f312e1243560800000000000000
+      internalID: 7292490951500510400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_back_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe8cb1073f8370d0800000000000000
+      internalID: -3426237425083707654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building_back_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ae328312326e170800000000000000
+      internalID: 8207285996512078448
       vertices: []
       indices: 
       edges: []
