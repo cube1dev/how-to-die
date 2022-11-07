@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5710482766720548938}
   - component: {fileID: 3617855283314955902}
-  - component: {fileID: 8133970217243637911}
-  - component: {fileID: 4568599082293357788}
-  - component: {fileID: 850398897}
-  m_Layer: 8
-  m_Name: Character
+  - component: {fileID: 8699180914381559504}
+  - component: {fileID: 1641087533}
+  m_Layer: 0
+  m_Name: Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f8ea3d87e7d7ed54da642435ee966014, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.32}
@@ -85,8 +84,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &8133970217243637911
-CapsuleCollider2D:
+--- !u!61 &8699180914381559504
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,34 +94,23 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010057449, y: -0.019281527}
-  m_Size: {x: 0.14055383, y: 0.24040183}
-  m_Direction: 0
---- !u!50 &4568599082293357788
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144906530009566125}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &850398897
+  m_Offset: {x: -0.21273959, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2183001, y: 0.32}
+  m_EdgeRadius: 0
+--- !u!114 &1641087533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,8 +119,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 144906530009566125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12dd3811eb6fa994092c3a70d1c3381f, type: 3}
+  m_Script: {fileID: 11500000, guid: 614b2549673ad554a9130578f7918d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMovable: 1
-  Speed: 1
+  PlayerLayer: 8
+  PushForce: 2
