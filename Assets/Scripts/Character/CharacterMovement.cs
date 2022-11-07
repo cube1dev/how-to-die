@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour {
     public bool IsMovable = true;
 
+    public static CharacterMovement Singleton;
+
     private PlayerAction playerAction;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
@@ -16,6 +18,7 @@ public class CharacterMovement : MonoBehaviour {
     }
 
     void Awake() {
+        Singleton = this;
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAction = new PlayerAction();
