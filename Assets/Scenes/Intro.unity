@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 196757218}
   - component: {fileID: 196757220}
   - component: {fileID: 196757219}
+  - component: {fileID: 196757221}
   m_Layer: 5
   m_Name: Title_1
   m_TagString: Untagged
@@ -239,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -268,6 +269,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196757217}
   m_CullTransparentMesh: 1
+--- !u!114 &196757221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196757217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bed42908dcf943a858f6f3a585fb91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  before: {fileID: 0}
+  fadeTime: 1
+  delay: 2
 --- !u!1 &1061796799
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +295,7 @@ GameObject:
   - component: {fileID: 1061796800}
   - component: {fileID: 1061796802}
   - component: {fileID: 1061796801}
+  - component: {fileID: 1061796803}
   m_Layer: 5
   m_Name: Title_0
   m_TagString: Untagged
@@ -318,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -347,6 +364,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061796799}
   m_CullTransparentMesh: 1
+--- !u!114 &1061796803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061796799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bed42908dcf943a858f6f3a585fb91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  before: {fileID: 0}
+  fadeTime: 1
+  delay: 0
 --- !u!1 &1719545752
 GameObject:
   m_ObjectHideFlags: 0

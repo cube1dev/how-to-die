@@ -38,3 +38,6 @@ Logs/
 # Builds
 *.apk
 *.unitypackage
+
+# UserSettings
+UserSettings/
