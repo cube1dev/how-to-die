@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -9210696459467158772
     second: sidewalk_1
+  - first:
+      213: -4158149022985733017
+    second: sidewalk_2
+  - first:
+      213: 343429987248235265
+    second: sidewalk_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -135,6 +141,48 @@ TextureImporter:
       bones: []
       spriteID: c0b0387de580d2080800000000000000
       internalID: -9210696459467158772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sidewalk_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c3cc19e794b46c0800000000000000
+      internalID: -4158149022985733017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sidewalk_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103e52bf0cb14c400800000000000000
+      internalID: 343429987248235265
       vertices: []
       indices: 
       edges: []
