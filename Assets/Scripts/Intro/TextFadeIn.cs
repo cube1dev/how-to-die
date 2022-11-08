@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class TextFadeIn : MonoBehaviour {
     private Text text;
-    public Text before;
     public float fadeTime = 1F;
     public float delay = 0F;
 
