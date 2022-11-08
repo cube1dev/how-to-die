@@ -112,6 +112,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Cheats",
+            "id": "45218361-1254-46a3-a80e-76b9f86a43b6",
+            "actions": [
+                {
+                    "name": "Gimmick8",
+                    "type": "Button",
+                    "id": "b7f181dd-0f03-44f3-98ef-3ed703d6bade",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "92996d25-834f-4fe2-99f6-81860e3c47e5",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gimmick8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -134,6 +134,34 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Cheats"",
+            ""id"": ""45218361-1254-46a3-a80e-76b9f86a43b6"",
+            ""actions"": [
+                {
+                    ""name"": ""Gimmick8"",
+                    ""type"": ""Button"",
+                    ""id"": ""b7f181dd-0f03-44f3-98ef-3ed703d6bade"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""92996d25-834f-4fe2-99f6-81860e3c47e5"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gimmick8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -160,6 +188,9 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
         m_PlayerActions_Jump = m_PlayerActions.FindAction("Jump", throwIfNotFound: true);
         m_PlayerActions_Move = m_PlayerActions.FindAction("Move", throwIfNotFound: true);
         m_PlayerActions_Interact = m_PlayerActions.FindAction("Interact", throwIfNotFound: true);
+        // Cheats
+        m_Cheats = asset.FindActionMap("Cheats", throwIfNotFound: true);
+        m_Cheats_Gimmick8 = m_Cheats.FindAction("Gimmick8", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -264,6 +295,39 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
         }
     }
     public PlayerActionsActions @PlayerActions => new PlayerActionsActions(this);
+
+    // Cheats
+    private readonly InputActionMap m_Cheats;
+    private ICheatsActions m_CheatsActionsCallbackInterface;
+    private readonly InputAction m_Cheats_Gimmick8;
+    public struct CheatsActions
+    {
+        private @PlayerAction m_Wrapper;
+        public CheatsActions(@PlayerAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Gimmick8 => m_Wrapper.m_Cheats_Gimmick8;
+        public InputActionMap Get() { return m_Wrapper.m_Cheats; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CheatsActions set) { return set.Get(); }
+        public void SetCallbacks(ICheatsActions instance)
+        {
+            if (m_Wrapper.m_CheatsActionsCallbackInterface != null)
+            {
+                @Gimmick8.started -= m_Wrapper.m_CheatsActionsCallbackInterface.OnGimmick8;
+                @Gimmick8.performed -= m_Wrapper.m_CheatsActionsCallbackInterface.OnGimmick8;
+                @Gimmick8.canceled -= m_Wrapper.m_CheatsActionsCallbackInterface.OnGimmick8;
+            }
+            m_Wrapper.m_CheatsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Gimmick8.started += instance.OnGimmick8;
+                @Gimmick8.performed += instance.OnGimmick8;
+                @Gimmick8.canceled += instance.OnGimmick8;
+            }
+        }
+    }
+    public CheatsActions @Cheats => new CheatsActions(this);
     private int m_PCSchemeIndex = -1;
     public InputControlScheme PCScheme
     {
@@ -278,5 +342,9 @@ public partial class @PlayerAction : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface ICheatsActions
+    {
+        void OnGimmick8(InputAction.CallbackContext context);
     }
 }
