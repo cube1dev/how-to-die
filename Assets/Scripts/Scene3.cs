@@ -14,7 +14,7 @@ public class Scene3 : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "slime")
+        if (other.gameObject.name == "slime" || other.gameObject.name == "slime")
         {
             this.transform.DOMoveY( -14f, 1.2f);
         }
