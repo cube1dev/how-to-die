@@ -41,3 +41,7 @@ Logs/
 
 # UserSettings
 UserSettings/
+
+# OS
+*.exe
+.DS_Store
