@@ -28,7 +28,9 @@ public class CollisionInteraction : MonoBehaviour
         };
     }
 
-    void OnTriggerEnter2D() {
+    void OnTriggerEnter2D(Collider2D coll) {
+        if(coll.gameObject.layer != 11) return;
+
         beingStarted = true;
         interaction = uiDestroyed ? Instantiate(InteractionPrefab, Canvas) : interaction;
         uiDestroyed = false;
@@ -44,7 +46,9 @@ public class CollisionInteraction : MonoBehaviour
             });
     }
 
-    void OnTriggerExit2D() {
+    void OnTriggerExit2D(Collider2D coll) {
+        if(coll.gameObject.layer != 11) return;
+
         var rectTransform = interaction.GetComponent<RectTransform>();
         rectTransform.DOScale(new Vector3(0.0f, 0.0f, 1.0f), 0.5f)
             .OnComplete(() => {
