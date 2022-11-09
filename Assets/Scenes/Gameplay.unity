@@ -880,6 +880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TheifPrefab: {fileID: 2136694698944387998, guid: 08df40a2be200054593b5d93b0d8a661, type: 3}
   TheifLocation: {fileID: 1950662464}
+  PoliceCarPrefab: {fileID: 0}
+  PoliceCarLocation: {fileID: 0}
 --- !u!61 &641577908
 BoxCollider2D:
   m_ObjectHideFlags: 0
