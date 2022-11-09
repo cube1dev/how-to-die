@@ -24,7 +24,7 @@ public class TheifMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll) {
         if(coll.gameObject.layer == 8 && first) {
             Debug.Log("Theif Collision Entered");
-            CharacterMovement.Singleton.IsMovable = true;
+            //CharacterMovement.Singleton.IsMovable = true;
             //HitboxCollider.enabled = false;
             first = false;
             StartCoroutine(StartZoomIn());
