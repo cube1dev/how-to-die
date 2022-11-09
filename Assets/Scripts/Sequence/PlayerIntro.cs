@@ -7,6 +7,7 @@ public class PlayerIntro : MonoBehaviour {
 
     [SerializeField] private CharacterCamera cam;
     [SerializeField] private CharacterMovement movement;
+    [SerializeField] private PushGimmick pushGimmick;
 
     void Start() {
         StartCoroutine(StartSequence());
@@ -15,7 +16,9 @@ public class PlayerIntro : MonoBehaviour {
     IEnumerator StartSequence() {
         yield return new WaitForSeconds(11);
         transform.DOMoveY(-8.599f, 1.5f);
+        yield return new WaitForSeconds(1.5f);
         movement.IsMovable = true;
         cam.Target = gameObject;
+        pushGimmick.NeedToPushed = true;
     }
 }
