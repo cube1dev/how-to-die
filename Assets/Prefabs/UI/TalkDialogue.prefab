@@ -281,4 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TalkStrings: []
+  TalkSpritePalette: []
+  TalkSprites: 
+  FallbackSprite: {fileID: 21300000, guid: f8ea3d87e7d7ed54da642435ee966014, type: 3}
   TalkText: {fileID: 1454053532509875376}
+  TalkImage: {fileID: 6378719247797152992}
