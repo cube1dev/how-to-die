@@ -8,7 +8,7 @@ public class CharacterCamera : MonoBehaviour {
     public float CameraZ = -10;
 
     void FixedUpdate() {
-        var targetPos = new Vector3(Target.transform.position.x, Target.transform.position.y, CameraZ);
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * LerpSpeed);
+        var targetPos = new Vector3(Target.transform.localPosition.x, Target.transform.localPosition.y, CameraZ);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, targetPos, Time.deltaTime * LerpSpeed);
     }
 }
